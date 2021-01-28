@@ -1,0 +1,129 @@
+-
+  const cards = [
+    {
+      name: `Harrison Jones`,
+      text: `<b>Battlecry:</b> Destroy your opponent's weapon and draw cards equal to its Durability.`,
+      cost: 5,
+      attack: 5,
+      health: 4,
+      color: `#f07000`, // LEGENDARY
+    },
+    {
+      name: `Bane of Doom`,
+      text: `Deal $2 damage to a character. If that kills it, summon a random Demon.`,
+      cost: 5,
+      color: `#ab48ee`, // EPIC
+    },
+    {
+      name: `Al'Akir the Windlord`,
+      text: `<b>Charge, Divine Shield, Taunt, Windfury</b>`,
+      cost: 8,
+      attack: 3,
+      health: 5,
+      color: `#f07000`, // LEGENDARY
+    },
+    {
+      name: `Aldor Peacekeeper`,
+      text: `<b>Battlecry:</b> Change an enemy minion's Attack to 1.`,
+      cost: 3,
+      attack: 3,
+      health: 3,
+      color: `#198eff`, // RARE
+    },
+    {
+      name: `Cabal Shadow Priest`,
+      text: `<b>Battlecry:</b> Take control of an enemy minion that has 2 or less Attack.`,
+      cost: 6,
+      attack: 4,
+      health: 5,
+      color: `#ab48ee`, // EPIC
+    },
+    {
+      name: `Eaglehorn Bow`,
+      text: `[x]Whenever a friendly\n<b>Secret</b> is revealed,\ngain +1 Durability.`,
+      cost: 3,
+      attack: 3,
+      durability: 2,
+      color: `#198eff`, // RARE
+    },
+    {
+      name: `Cruel Taskmaster`,
+      text: `<b>Battlecry:</b> Deal 1 damage to a minion and give it +2 Attack.`,
+      cost: 2,
+      attack: 2,
+      health: 2,
+      color: `#0faf03`, // COMMON
+    },
+    {
+      name: `Frost Elemental`,
+      text: `<b>Battlecry:</b> <b>Freeze</b> a character.`,
+      cost: 6,
+      attack: 5,
+      health: 5,
+      color: `#0faf03`, // COMMON
+    },
+    {
+      name: `Bloodlust`,
+      text: `Give your minions +3 Attack this turn.`,
+      cost: 5,
+      color: `#000000`, // FREE
+    },
+    {
+      name: `Fire Elemental`,
+      text: `<b>Battlecry:</b> Deal 3 damage.`,
+      cost: 6,
+      attack: 6,
+      health: 5,
+      color: `#000000`, // FREE
+    },
+    {
+      name: `Arcanite Reaper`,
+      cost: 5,
+      attack: 5,
+      durability: 2,
+      color: `#000000`, // FREE
+    },
+    {
+      name: `Kill Command`,
+      text: `Deal $3 damage. If you control a Beast, deal\n$5 damage instead.`,
+      cost: 3,
+      color: `#000000`, // FREE
+    },
+    {
+      name: `Pyroblast`,
+      text: `Deal $10 damage.`,
+      cost: 10,
+      color: `#ab48ee`, // EPIC
+    },
+    {
+      name: `Silence`,
+      text: `<b>Silence</b> a minion.`,
+      cost: 0,
+      color: `#0faf03`, // COMMON
+    },
+  ]
+
+div.listing-body
+  table.listing-body__table.js-table
+    thead
+      tr.js-table-header
+        th.listing-body__head-descr
+          span Name
+        th.listing-body__head-cost
+          span Cost
+        th.listing-body__head-atk
+          span ATK
+        th.listing-body__head-hp
+          span HP/DU
+
+    tbody
+      tr
+        td.listing-body__cell-descr
+          a(style=`color: #f07000;`) Zephrys the Great
+          span <b>Battlecry:</b> If your deck has no duplicates, wish for the perfect card.
+        td.listing-body__cell-cost
+          span 2
+        td.listing-body__cell-atk
+          span 3
+        td.listing-body__cell-hp
+          span 2

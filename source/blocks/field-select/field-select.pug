@@ -1,0 +1,10 @@
+mixin field-select(data)
+  - const attrs = data.attrs;
+  div(class='field-select' + (attributes.class ? ' ' + attributes.class : ''))
+    select&attributes(attrs)
+      if data.options
+        each option, index in data.options
+          if index === 0
+            option(value=index, selected)!= option
+          else
+            option(value=index)!= option

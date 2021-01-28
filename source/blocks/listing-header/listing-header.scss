@@ -1,0 +1,127 @@
+.listing-header {
+  position: relative;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 5px;
+  user-select: none;
+  background-color: #fff2dd; // todo var
+
+  @include mobile {
+    max-width: 600px;
+    min-width: 375px;
+  }
+}
+
+.listing-header__image {
+  position: absolute;
+  display: block;
+  top: 25px;
+  left: 25px;
+  width: 150px;
+  height: 200px;
+  border-radius: 75px / 100px;
+  border: 1px solid #dddddd;
+  overflow: hidden;
+
+  @include mobile {
+    top: 15px;
+    left: 15px;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+  }
+}
+
+.listing-header__image img {
+  width: 100%;
+  height: 100%;
+}
+
+.listing-header__form {
+  border: 1px solid #decda0;
+}
+
+.listing-header__form-content {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 205px;
+  padding-right: 30px;
+
+  @include mobile {
+    display: block;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+.listing-header__field {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.listing-header__field > label {
+  margin-right: auto;
+  font-size: 18px;
+}
+
+.listing-header__field > div {
+  width: 110px;
+
+  @include mobile {
+    width: 95px;
+  }
+}
+
+.listing-header__field--locale {
+  width: 240px;
+  margin-bottom: 30px;
+  margin-left: auto;
+
+  @include mobile {
+    width: 210px;
+  }
+}
+
+.listing-header__field--cost > div:nth-of-type(1) {
+  margin-right: 20px;
+}
+
+.listing-header__field--cost > div:nth-of-type(2) {
+  display: inline-block;
+  vertical-align: top;
+  background-color: #f9f9f9;
+  border: 1px solid #dddddd;
+  border-radius: 2.5px;
+  font-size: 14px;
+  min-height: 44px;
+  overflow: hidden;
+
+  &:focus-within {
+    border-color: #b7b7b7;
+  }
+}
+
+.listing-header__field--class > div {
+  width: 240px;
+
+  @include mobile {
+    width: 210px;
+  }
+}
+
+.listing-header__field--type > div {
+  width: 240px;
+
+  @include mobile {
+    width: 210px;
+  }
+}
+
+.listing-header__submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}

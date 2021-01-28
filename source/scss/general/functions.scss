@@ -1,0 +1,25 @@
+// Calculates unitless line-height value
+@function get-line-height($font-size, $line-height) {
+  @return $line-height / $font-size;
+}
+
+// vw from px
+@function get-vw-1920($target) {
+  $vw-context: (1920*0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-vw-1440($target) {
+  $vw-context: (1440*0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-vw-600($target) {
+  $vw-context: (600*0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}
+
+@function get-vw-320($target) {
+  $vw-context: (320*0.01) * 1px;
+  @return ($target/$vw-context) * 1vw;
+}

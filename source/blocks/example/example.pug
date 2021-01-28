@@ -1,0 +1,10 @@
+mixin example(list)
+  div(class='example' + (attributes.class ? ' ' + attributes.class : ''))
+    ul(data-list='test', data-item='test2')
+      each item in list
+        li.example__item
+          span!= item
+    section(
+      data-src='test1',
+      data-smth='test2').example__section#myid
+      block

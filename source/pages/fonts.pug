@@ -1,0 +1,32 @@
+include ../blocks/head/head
+
+-
+  const Montserrat = [
+    ['OpenSans Regular', 400],
+    ['OpenSans Bold', 700],
+  ]
+
+  const sizes = [10, 11, 12, 14, 16, 18, 24, 30, 36]
+
+  const testStrings = [
+    'абвгдеёжзийклмнопрстуфхцчшщъыьэюя',
+    'АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ',
+    'abcdefghijklmnopqrstuvwxyz',
+    'ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+    '0123456789.:,;()*!?\'@#<>$%&^+-=~'
+  ]
+
+doctype html
+html(lang='ru')
+  +head('Шрифты')
+  body
+
+    main
+      section(style='margin: 20px;')
+        each item in Montserrat
+          div(style='font-family: "OpenSans"; font-weight:' + item[1] + '; font-style: normal; margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid grey;')
+            h1(style='font-weight: inherit; margin-bottom: 10px;')= item[0]
+            each string in testStrings
+              p!= string
+            each size in sizes
+              p(style='font-size: ' + size + 'px;') Съешь же ещё этих мягких французских булок, да выпей чаю.

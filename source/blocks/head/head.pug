@@ -1,0 +1,21 @@
+-
+  const fontsPreload = [
+    'OpenSans-Bold.woff2',
+    'OpenSans-Regular.woff2',
+  ]
+
+mixin head(title)
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    meta(name='description', content='Zephyrs Outcome')
+    title!= title
+    link(rel='preload', href='css/style.css', as='style')
+    link(rel='stylesheet', href='css/style.css', media='screen')
+    link(rel='preload', href='js/main.js', as='script')
+    each font in fontsPreload
+      link(rel='preload', href='fonts/' + font, as='font', crossorigin='anonymous')
+    //- page list burger (pages from index.html)
+    //- include page-list.pug
+    //- script(src='https://www.google.com/recaptcha/api.js?hl=ru', async, defer)

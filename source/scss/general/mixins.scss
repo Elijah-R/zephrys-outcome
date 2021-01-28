@@ -1,0 +1,36 @@
+@mixin montserrat($size, $height, $weight) {
+  font-family: $montserrat;
+  font-size: $size + px;
+  line-height: $height;
+  font-weight: $weight;
+}
+
+@mixin desktopxxl {
+  @media (max-width: $screen-xxl) {
+    @content;
+  }
+}
+
+@mixin desktopxl {
+  @media (max-width: $screen-xl) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin retina {
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    @content;
+  }
+}

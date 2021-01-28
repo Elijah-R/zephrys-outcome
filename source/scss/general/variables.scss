@@ -1,0 +1,27 @@
+// region screen sizes
+$screen-sm: 374px;
+$screen-md: 599px;
+$screen-lg: 1023px;
+$screen-xl: 1440px;
+$screen-xxl: 1799px;
+// endregion
+
+// region colors
+$green: #3c5f42;
+$dark-green: #345039; //Цвет ховера зеленых элементов
+$gray: #2d2d2d;
+$page-bg: #00202d;
+
+$white: #ffffff;
+$black: #000000;
+
+// endregion
+
+// region fonts
+$opensans: "OpenSans", "Arial", sans-serif;
+// endregion
+
+// region retina
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+// endregion

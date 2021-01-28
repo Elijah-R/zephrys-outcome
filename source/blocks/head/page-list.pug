@@ -1,0 +1,26 @@
+script.
+    window.addEventListener("DOMContentLoaded", function () {
+        var s = document.createElement("style");
+        document.head.appendChild(s);
+        s.innerHTML =
+            ".pglst { position: fixed; bottom: 10px; left: 10px; width: 30px; height: 30px; border: 1px solid #000; opacity: 0.4; transition: all 0.4s; background-color: #fff; z-index: 9999; overflow: hidden; }\n";
+        s.innerHTML +=
+            ".pglst:hover { width: 310px; height: 350px; opacity: 1; overflow: auto; }\n";
+        s.innerHTML +=
+            ".pglst li { margin: 10px; }\n";
+        var d = document.createElement("div");
+        var i = document.createElement("iframe");
+        var b = document.querySelector("body");
+        d.classList.add("pglst");
+        i.onload = function () {
+            var c = i.contentDocument || i.contentWindow.document;
+            d.innerHTML = '<ul>' + c.body.querySelector('body > ul').innerHTML + '</ul>';
+        };
+        i.setAttribute(
+            "src",
+            window.location.href.replace(/([\w\d_-]*)\.?[^\\\/]*$/i, "index.html")
+        );
+        d.appendChild(i);
+        b.appendChild(d);
+        console.log('Remove this from < head >');
+    });

@@ -1,0 +1,3 @@
+mixin button(text, type)
+  //- button(class='button' + (attributes.class ? ' ' + attributes.class : ''), type= type)!= text
+  button&attributes(attributes).button!= text

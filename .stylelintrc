@@ -1,0 +1,11 @@
+{
+  "extends": "stylelint-config-htmlacademy",
+  "plugins": [
+    "stylelint-at-rule-no-children"
+  ],
+  "rules": {
+    "declaration-no-important": true,
+    "indentation": [2, {"ignore": ["inside-parens"]}],
+    "aditayvm/at-rule-no-children": true
+  }
+}

@@ -1,0 +1,15 @@
+-
+  const data = {
+    id: 'locale',
+    type: '',
+    name: 'locale',
+    pattern: '', //- optional
+    autocomplete: 'off', //- optional
+    placeholder: '', //- optional
+    required: true, //- optional
+  }
+
+mixin field-input(data)
+  - const attrs = data.attrs;
+  div(class='field-input' + (attributes.class ? ' ' + attributes.class : ''))
+    input&attributes(attrs).js-field-input

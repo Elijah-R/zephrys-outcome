@@ -1,0 +1,85 @@
+include ../field-select/field-select
+include ../field-input/field-input
+include ../button/button
+
+-
+  const locale = {
+    label: 'Locale',
+    // options: ['enUS', 'frFR', 'deDE', 'esES', 'esMX', 'itIT', 'ruRU', 'koKR', 'ptBR', 'ptPT', 'jaJP', 'plPL', 'zhCN', 'zhTW', 'thTH'],
+    // English, French, German, Spanish, Italian, Russian, Korean, Portuguese, Japanese, Polish, Chinese, Thai
+    // options: ['EN', 'FR', 'DE', 'ES', 'IT', 'RU', 'KO', 'PT', 'JA', 'PL', 'ZH', 'TH'],
+    options: ['EN', 'DE', 'ES', 'FR', 'IT', 'PL', 'PT', 'RU'],
+    attrs: {
+      id: 'locale',
+      name: 'locale',
+    }
+  }
+
+  const comparator = {
+    label: 'Cost',
+    options: ['&lt;=', '='],
+    attrs: {
+      id: 'comparator',
+      name: 'comparator',
+    }
+  }
+
+  const cost = {
+    attrs: {
+      id: 'cost',
+      name: 'cost',
+      type: 'number',
+      min: '0',
+      max: '10',
+    }
+  }
+
+  const cardClass = {
+    label: 'Class',
+    options: ['Neutral', 'Demon Hunter', 'Druid', 'Hunter', 'Mage', 'Paladin', 'Priest', 'Rogue', 'Shaman', 'Warlock', 'Warrior'],
+    attrs: {
+      id: 'class',
+      name: 'class',
+      multiple: true,
+    }
+  }
+
+  const type = {
+    label: 'Type',
+    options: ['Ability', 'Minion', 'Weapon'],
+    attrs: {
+      id: 'type',
+      name: 'type',
+      multiple: true,
+    }
+  }
+
+div.listing-header
+  picture.listing-header__image
+    source(media='(min-width: 600px)', srcset='img/zephrys-big.webp, img/zephrys-big.webp 2x', type='image/webp')
+    source(media='(min-width: 600px)', srcset='img/zephrys-big.jpg, img/zephrys-big@2x.jpg 2x')
+    source(srcset='img/zephrys-small.webp, img/zephrys-small.webp 2x', type='image/webp')
+    img(src='img/zephrys-small.jpg', srcset='img/zephrys-small@2x.jpg 2x', alt='Zephrys')
+  form.listing-header__form
+    div.listing-header__form-content
+
+      div.listing-header__field.listing-header__field--locale
+        label(for=locale.attrs.id)!= locale.label
+        +field-select(locale).js-locale
+
+      div.listing-header__field.listing-header__field--cost
+        label(for=comparator.attrs.id)!= comparator.label
+        +field-select(comparator).js-comparator
+        label(for=cost.attrs.id).visually-hidden!= comparator.label
+        +field-input(cost).js-cost
+
+      div.listing-header__field.listing-header__field--class
+        label(for=cardClass.attrs.id)!= cardClass.label
+        +field-select(cardClass).js-class
+
+      div.listing-header__field.listing-header__field--type
+        label(for=type.attrs.id)!= type.label
+        +field-select(type).js-type
+
+      div.listing-header__submit
+        +button('Filter')(type='submit').js-submit

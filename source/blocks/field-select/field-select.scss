@@ -1,0 +1,42 @@
+//.button {
+//  position: relative;
+//  width: 100%;
+//  padding: get-vw-1920(12px) get-vw-1920(20px);
+//  min-height: get-vw-1920(50px);
+//  font-size: get-vw-1920(14px);
+//  line-height: get-line-height(14, 24);
+//  color: $white;
+//  text-align: center;
+//  outline: none;
+//  background-color: $green;
+//  transition: background-color 0.3s;
+//  border: none;
+//  border-radius: 5px;
+//
+//  @include desktopxl {
+//    padding: get-vw-1440(12px) get-vw-1440(20px);
+//    min-height: get-vw-1440(50px);
+//    font-size: get-vw-1440(14px);
+//  }
+//
+//  @include tablet {
+//    padding: get-vw-600(12px) get-vw-600(20px);
+//    min-height: get-vw-600(50px);
+//    font-size: get-vw-600(14px);
+//  }
+//
+//  @include mobile {
+//    padding: get-vw-320(12px) get-vw-320(20px);
+//    min-height: get-vw-320(50px);
+//    font-size: get-vw-320(14px);
+//  }
+//}
+//
+//.button:active {
+//  color: rgba(255, 255, 255, 0.5);
+//}
+//
+//.button:hover,
+//.button:focus {
+//  background-color: $dark-green;
+//}

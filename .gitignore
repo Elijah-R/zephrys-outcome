@@ -1,0 +1,17 @@
+.DS_Store
+.idea
+.vscode
+*.7z
+*.ai
+*.log
+*.pdf
+*.psd
+*.sublime*
+*.zip
+node_modules/
+npm-debug.*
+Thumbs.db
+desktop.ini
+
+# Project exclude paths
+/build/
